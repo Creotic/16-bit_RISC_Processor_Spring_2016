@@ -1,0 +1,1337 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.43 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.43 secs
+ 
+--> Reading design: top_level_lab8.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "top_level_lab8.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "top_level_lab8"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : top_level_lab8
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\reg16.v" into library work
+Parsing module <reg16>.
+Analyzing Verilog file "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\dec_3to8.v" into library work
+Parsing module <dec_3to8>.
+Analyzing Verilog file "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\s_mux.v" into library work
+Parsing module <s_mux>.
+Analyzing Verilog file "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\reg_file.v" into library work
+Parsing module <reg_file>.
+Analyzing Verilog file "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\ALU_16bit.v" into library work
+Parsing module <ALU_16bit>.
+Analyzing Verilog file "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\Reg_EU.v" into library work
+Parsing module <Reg_EU>.
+Analyzing Verilog file "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\integer_datapath.v" into library work
+Parsing module <integer_datapath>.
+Analyzing Verilog file "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\led_controller.v" into library work
+Parsing module <led_controller>.
+Analyzing Verilog file "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\led_clk.v" into library work
+Parsing module <led_clk>.
+Analyzing Verilog file "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\ipcore_dir\ram_256x16.v" into library work
+Parsing module <ram_256x16>.
+Analyzing Verilog file "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\hex_to_7seg.v" into library work
+Parsing module <hex_to_7seg>.
+Analyzing Verilog file "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\exec_unit.v" into library work
+Parsing module <exec_unit>.
+Analyzing Verilog file "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\control_unit.v" into library work
+Parsing module <control_unit>.
+Analyzing Verilog file "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\addr_mux.v" into library work
+Parsing module <addr_mux>.
+Analyzing Verilog file "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\RISC_Proc.v" into library work
+Parsing module <RISC_Proc>.
+Analyzing Verilog file "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\ram1.v" into library work
+Parsing module <ram1>.
+Analyzing Verilog file "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\display_controller.v" into library work
+Parsing module <display_controller>.
+Analyzing Verilog file "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\debounce.v" into library work
+Parsing module <debounce>.
+Analyzing Verilog file "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\clk_div.v" into library work
+Parsing module <clk_div>.
+Analyzing Verilog file "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\top_level_lab8.v" into library work
+Parsing module <top_level_lab8>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <top_level_lab8>.
+
+Elaborating module <clk_div>.
+
+Elaborating module <debounce>.
+
+Elaborating module <RISC_Proc>.
+
+Elaborating module <exec_unit>.
+
+Elaborating module <integer_datapath>.
+
+Elaborating module <reg_file>.
+
+Elaborating module <dec_3to8>.
+
+Elaborating module <reg16>.
+
+Elaborating module <s_mux>.
+
+Elaborating module <ALU_16bit>.
+WARNING:HDLCompiler:413 - "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\ALU_16bit.v" Line 36: Result of 32-bit expression is truncated to fit in 17-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\ALU_16bit.v" Line 51: Result of 32-bit expression is truncated to fit in 17-bit target.
+
+Elaborating module <Reg_EU>.
+
+Elaborating module <control_unit>.
+WARNING:HDLCompiler:91 - "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\control_unit.v" Line 105: Signal <ps_N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\control_unit.v" Line 116: Signal <ps_N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\control_unit.v" Line 118: Signal <IR> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\control_unit.v" Line 141: Signal <IR> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\control_unit.v" Line 145: Signal <N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\control_unit.v" Line 146: Signal <ps_N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\control_unit.v" Line 152: Signal <IR> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\control_unit.v" Line 156: Signal <N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\control_unit.v" Line 157: Signal <ps_N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\control_unit.v" Line 163: Signal <IR> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\control_unit.v" Line 167: Signal <N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\control_unit.v" Line 168: Signal <ps_N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\control_unit.v" Line 174: Signal <IR> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\control_unit.v" Line 178: Signal <ps_N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\control_unit.v" Line 179: Signal <ps_N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\control_unit.v" Line 185: Signal <IR> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\control_unit.v" Line 189: Signal <N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\control_unit.v" Line 190: Signal <ps_N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\control_unit.v" Line 196: Signal <IR> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\control_unit.v" Line 200: Signal <N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\control_unit.v" Line 201: Signal <ps_N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\control_unit.v" Line 207: Signal <IR> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\control_unit.v" Line 211: Signal <N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\control_unit.v" Line 212: Signal <ps_N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\control_unit.v" Line 218: Signal <IR> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\control_unit.v" Line 222: Signal <N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\control_unit.v" Line 223: Signal <ps_N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\control_unit.v" Line 229: Signal <IR> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\control_unit.v" Line 233: Signal <ps_N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\control_unit.v" Line 234: Signal <ps_N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\control_unit.v" Line 240: Signal <IR> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\control_unit.v" Line 244: Signal <ps_N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\control_unit.v" Line 245: Signal <ps_N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\control_unit.v" Line 251: Signal <IR> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\control_unit.v" Line 255: Signal <ps_N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\control_unit.v" Line 256: Signal <ps_N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\control_unit.v" Line 264: Signal <ps_Z> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\control_unit.v" Line 266: Signal <ps_N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\control_unit.v" Line 267: Signal <ps_N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\control_unit.v" Line 275: Signal <ps_Z> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\control_unit.v" Line 277: Signal <ps_N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\control_unit.v" Line 278: Signal <ps_N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\control_unit.v" Line 286: Signal <ps_C> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\control_unit.v" Line 288: Signal <ps_N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\control_unit.v" Line 289: Signal <ps_N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\control_unit.v" Line 295: Signal <IR> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\control_unit.v" Line 299: Signal <ps_N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\control_unit.v" Line 300: Signal <ps_N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\control_unit.v" Line 310: Signal <ps_N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\control_unit.v" Line 311: Signal <ps_N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\control_unit.v" Line 321: Signal <ps_N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+
+Elaborating module <ram1>.
+
+Elaborating module <ram_256x16>.
+WARNING:HDLCompiler:1499 - "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\ipcore_dir\ram_256x16.v" Line 39: Empty module <ram_256x16> remains a black box.
+WARNING:HDLCompiler:189 - "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\top_level_lab8.v" Line 62: Size mismatch in connection of port <addr>. Formal port size is 8-bit while actual signal size is 16-bit.
+
+Elaborating module <display_controller>.
+
+Elaborating module <led_clk>.
+
+Elaborating module <led_controller>.
+
+Elaborating module <addr_mux>.
+
+Elaborating module <hex_to_7seg>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <top_level_lab8>.
+    Related source file is "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\top_level_lab8.v".
+    Found 16-bit register for signal <counter>.
+    Found 16-bit adder for signal <counter[15]_GND_1_o_add_1_OUT> created at line 43.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  16 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+Unit <top_level_lab8> synthesized.
+
+Synthesizing Unit <clk_div>.
+    Related source file is "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\clk_div.v".
+    Found 32-bit register for signal <i>.
+    Found 1-bit register for signal <clk_out>.
+    Found 32-bit adder for signal <i[31]_GND_2_o_add_1_OUT> created at line 42.
+    Found 32-bit comparator greater for signal <n0002> created at line 43
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  33 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred   1 Multiplexer(s).
+Unit <clk_div> synthesized.
+
+Synthesizing Unit <debounce>.
+    Related source file is "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\debounce.v".
+    Found 1-bit register for signal <q1>.
+    Found 1-bit register for signal <q2>.
+    Found 1-bit register for signal <q3>.
+    Found 1-bit register for signal <q4>.
+    Found 1-bit register for signal <q5>.
+    Found 1-bit register for signal <q6>.
+    Found 1-bit register for signal <q7>.
+    Found 1-bit register for signal <q9>.
+    Found 1-bit register for signal <q0>.
+    Found 1-bit register for signal <q8>.
+    Summary:
+	inferred  10 D-type flip-flop(s).
+Unit <debounce> synthesized.
+
+Synthesizing Unit <RISC_Proc>.
+    Related source file is "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\RISC_Proc.v".
+    Summary:
+	no macro.
+Unit <RISC_Proc> synthesized.
+
+Synthesizing Unit <exec_unit>.
+    Related source file is "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\exec_unit.v".
+    Found 16-bit adder for signal <PC_add> created at line 58.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   2 Multiplexer(s).
+Unit <exec_unit> synthesized.
+
+Synthesizing Unit <integer_datapath>.
+    Related source file is "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\integer_datapath.v".
+    Summary:
+	no macro.
+Unit <integer_datapath> synthesized.
+
+Synthesizing Unit <reg_file>.
+    Related source file is "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\reg_file.v".
+    Summary:
+	no macro.
+Unit <reg_file> synthesized.
+
+Synthesizing Unit <dec_3to8>.
+    Related source file is "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\dec_3to8.v".
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <dec_3to8> synthesized.
+
+Synthesizing Unit <reg16>.
+    Related source file is "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\reg16.v".
+    Found 16-bit register for signal <Dout>.
+    Found 1-bit tristate buffer for signal <DA<15>> created at line 36
+    Found 1-bit tristate buffer for signal <DA<14>> created at line 36
+    Found 1-bit tristate buffer for signal <DA<13>> created at line 36
+    Found 1-bit tristate buffer for signal <DA<12>> created at line 36
+    Found 1-bit tristate buffer for signal <DA<11>> created at line 36
+    Found 1-bit tristate buffer for signal <DA<10>> created at line 36
+    Found 1-bit tristate buffer for signal <DA<9>> created at line 36
+    Found 1-bit tristate buffer for signal <DA<8>> created at line 36
+    Found 1-bit tristate buffer for signal <DA<7>> created at line 36
+    Found 1-bit tristate buffer for signal <DA<6>> created at line 36
+    Found 1-bit tristate buffer for signal <DA<5>> created at line 36
+    Found 1-bit tristate buffer for signal <DA<4>> created at line 36
+    Found 1-bit tristate buffer for signal <DA<3>> created at line 36
+    Found 1-bit tristate buffer for signal <DA<2>> created at line 36
+    Found 1-bit tristate buffer for signal <DA<1>> created at line 36
+    Found 1-bit tristate buffer for signal <DA<0>> created at line 36
+    Found 1-bit tristate buffer for signal <DB<15>> created at line 37
+    Found 1-bit tristate buffer for signal <DB<14>> created at line 37
+    Found 1-bit tristate buffer for signal <DB<13>> created at line 37
+    Found 1-bit tristate buffer for signal <DB<12>> created at line 37
+    Found 1-bit tristate buffer for signal <DB<11>> created at line 37
+    Found 1-bit tristate buffer for signal <DB<10>> created at line 37
+    Found 1-bit tristate buffer for signal <DB<9>> created at line 37
+    Found 1-bit tristate buffer for signal <DB<8>> created at line 37
+    Found 1-bit tristate buffer for signal <DB<7>> created at line 37
+    Found 1-bit tristate buffer for signal <DB<6>> created at line 37
+    Found 1-bit tristate buffer for signal <DB<5>> created at line 37
+    Found 1-bit tristate buffer for signal <DB<4>> created at line 37
+    Found 1-bit tristate buffer for signal <DB<3>> created at line 37
+    Found 1-bit tristate buffer for signal <DB<2>> created at line 37
+    Found 1-bit tristate buffer for signal <DB<1>> created at line 37
+    Found 1-bit tristate buffer for signal <DB<0>> created at line 37
+    Summary:
+	inferred  16 D-type flip-flop(s).
+	inferred  32 Tristate(s).
+Unit <reg16> synthesized.
+
+Synthesizing Unit <s_mux>.
+    Related source file is "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\s_mux.v".
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <s_mux> synthesized.
+
+Synthesizing Unit <ALU_16bit>.
+    Related source file is "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\ALU_16bit.v".
+    Found 17-bit subtractor for signal <GND_43_o_GND_43_o_sub_2_OUT> created at line 36.
+    Found 17-bit subtractor for signal <GND_43_o_GND_43_o_sub_4_OUT> created at line 38.
+    Found 17-bit adder for signal <n0033> created at line 35.
+    Found 17-bit adder for signal <n0036> created at line 37.
+    Found 17-bit subtractor for signal <GND_43_o_GND_43_o_sub_9_OUT> created at line 51.
+    Found 16-bit 15-to-1 multiplexer for signal <Y> created at line 32.
+    Summary:
+	inferred   5 Adder/Subtractor(s).
+	inferred  11 Multiplexer(s).
+Unit <ALU_16bit> synthesized.
+
+Synthesizing Unit <Reg_EU>.
+    Related source file is "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\Reg_EU.v".
+    Found 16-bit register for signal <Q>.
+    Found 16-bit adder for signal <Q[15]_GND_44_o_add_0_OUT> created at line 33.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  16 D-type flip-flop(s).
+Unit <Reg_EU> synthesized.
+
+Synthesizing Unit <control_unit>.
+    Related source file is "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\control_unit.v".
+        RESET = 0
+        FETCH = 1
+        DECODE = 2
+        ADD = 3
+        SUB = 4
+        CMP = 5
+        MOV = 6
+        INC = 7
+        DEC = 8
+        SHL = 9
+        SHR = 10
+        LLD = 11
+        STO = 12
+        LDI = 13
+        JE = 14
+        JNE = 15
+        JC = 16
+        JMP = 17
+        HALT = 18
+        ILLEGAL_OP = 31
+    Found 5-bit register for signal <state>.
+    Found 1-bit register for signal <ps_C>.
+    Found 1-bit register for signal <ps_Z>.
+    Found 1-bit register for signal <ps_N>.
+    Found 32x16-bit Read Only RAM for signal <_n0199>
+WARNING:Xst:737 - Found 1-bit latch for signal <W_Adr<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <W_Adr<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <W_Adr<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <R_Adr<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <R_Adr<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <R_Adr<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <S_Adr<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <S_Adr<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <S_Adr<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <adr_sel>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_sel>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pc_ld>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pc_inc>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pc_sel>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ir_ld>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <mw_en>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <rw_en>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <alu_op<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <alu_op<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <alu_op<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <alu_op<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ns_C>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ns_Z>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ns_N>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <status<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <status<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <status<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <status<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <status<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <status<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <status<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <status<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <nextstate<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <nextstate<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <nextstate<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <nextstate<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <nextstate<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   8 D-type flip-flop(s).
+	inferred  37 Latch(s).
+	inferred  39 Multiplexer(s).
+Unit <control_unit> synthesized.
+
+Synthesizing Unit <ram1>.
+    Related source file is "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\ram1.v".
+    Summary:
+	no macro.
+Unit <ram1> synthesized.
+
+Synthesizing Unit <display_controller>.
+    Related source file is "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\display_controller.v".
+    Summary:
+	no macro.
+Unit <display_controller> synthesized.
+
+Synthesizing Unit <led_clk>.
+    Related source file is "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\led_clk.v".
+    Found 32-bit register for signal <i>.
+    Found 1-bit register for signal <clk_out>.
+    Found 32-bit adder for signal <i[31]_GND_86_o_add_1_OUT> created at line 41.
+    Found 32-bit comparator greater for signal <n0002> created at line 42
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  33 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred   1 Multiplexer(s).
+Unit <led_clk> synthesized.
+
+Synthesizing Unit <led_controller>.
+    Related source file is "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\led_controller.v".
+    Found 2-bit register for signal <present_state>.
+    Found finite state machine <FSM_0> for signal <present_state>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 4                                              |
+    | Inputs             | 0                                              |
+    | Outputs            | 6                                              |
+    | Clock              | clk_in (rising_edge)                           |
+    | Reset              | reset (positive)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 00                                             |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred   1 Finite State Machine(s).
+Unit <led_controller> synthesized.
+
+Synthesizing Unit <addr_mux>.
+    Related source file is "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\addr_mux.v".
+    Found 4-bit 4-to-1 multiplexer for signal <Y> created at line 26.
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <addr_mux> synthesized.
+
+Synthesizing Unit <hex_to_7seg>.
+    Related source file is "C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\hex_to_7seg.v".
+    Found 16x7-bit Read Only RAM for signal <_n0024>
+    Summary:
+	inferred   1 RAM(s).
+Unit <hex_to_7seg> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 16x7-bit single-port Read Only RAM                    : 1
+ 32x16-bit single-port Read Only RAM                   : 1
+# Adders/Subtractors                                   : 11
+ 16-bit adder                                          : 4
+ 17-bit adder                                          : 2
+ 17-bit subtractor                                     : 3
+ 32-bit adder                                          : 2
+# Registers                                            : 39
+ 1-bit register                                        : 25
+ 16-bit register                                       : 11
+ 32-bit register                                       : 2
+ 5-bit register                                        : 1
+# Latches                                              : 37
+ 1-bit latch                                           : 37
+# Comparators                                          : 2
+ 32-bit comparator greater                             : 2
+# Multiplexers                                         : 61
+ 1-bit 2-to-1 multiplexer                              : 48
+ 16-bit 15-to-1 multiplexer                            : 1
+ 16-bit 2-to-1 multiplexer                             : 5
+ 32-bit 2-to-1 multiplexer                             : 2
+ 4-bit 4-to-1 multiplexer                              : 1
+ 5-bit 2-to-1 multiplexer                              : 1
+ 8-bit 2-to-1 multiplexer                              : 3
+# Tristates                                            : 256
+ 1-bit tristate buffer                                 : 256
+# FSMs                                                 : 1
+# Xors                                                 : 1
+ 16-bit xor2                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/ram_256x16.ngc>.
+Loading core <ram_256x16> for timing and area information for instance <dut>.
+WARNING:Xst:1710 - FF/Latch <alu_op_3> (without init value) has a constant value of 0 in block <CU>. This FF/Latch will be trimmed during the optimization process.
+
+Synthesizing (advanced) Unit <control_unit>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0199> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32-word x 16-bit                    |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <state>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <control_unit> synthesized (advanced).
+
+Synthesizing (advanced) Unit <hex_to_7seg>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0024> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 7-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <hex>           |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <hex_to_7seg> synthesized (advanced).
+
+Synthesizing (advanced) Unit <top_level_lab8>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+Unit <top_level_lab8> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 16x7-bit single-port distributed Read Only RAM        : 1
+ 32x16-bit single-port distributed Read Only RAM       : 1
+# Adders/Subtractors                                   : 10
+ 16-bit adder                                          : 3
+ 17-bit adder                                          : 2
+ 17-bit subtractor                                     : 3
+ 32-bit adder                                          : 2
+# Counters                                             : 1
+ 16-bit up counter                                     : 1
+# Registers                                            : 254
+ Flip-Flops                                            : 254
+# Comparators                                          : 2
+ 32-bit comparator greater                             : 2
+# Multiplexers                                         : 61
+ 1-bit 2-to-1 multiplexer                              : 48
+ 16-bit 15-to-1 multiplexer                            : 1
+ 16-bit 2-to-1 multiplexer                             : 5
+ 32-bit 2-to-1 multiplexer                             : 2
+ 4-bit 4-to-1 multiplexer                              : 1
+ 5-bit 2-to-1 multiplexer                              : 1
+ 8-bit 2-to-1 multiplexer                              : 3
+# FSMs                                                 : 1
+# Xors                                                 : 1
+ 16-bit xor2                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <alu_op_3> (without init value) has a constant value of 0 in block <control_unit>. This FF/Latch will be trimmed during the optimization process.
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_0> on signal <present_state[1:4]> with one-hot encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 0001
+ 01    | 0010
+ 10    | 0100
+ 11    | 1000
+-------------------
+WARNING:Xst:2040 - Unit reg_file: 32 multi-source signals are replaced by logic (pull-up yes): R<0>, R<10>, R<11>, R<12>, R<13>, R<14>, R<15>, R<1>, R<2>, R<3>, R<4>, R<5>, R<6>, R<7>, R<8>, R<9>, S<0>, S<10>, S<11>, S<12>, S<13>, S<14>, S<15>, S<1>, S<2>, S<3>, S<4>, S<5>, S<6>, S<7>, S<8>, S<9>.
+
+Optimizing unit <top_level_lab8> ...
+
+Optimizing unit <clk_div> ...
+
+Optimizing unit <led_clk> ...
+
+Optimizing unit <debounce> ...
+
+Optimizing unit <reg_file> ...
+
+Optimizing unit <ALU_16bit> ...
+
+Optimizing unit <Reg_EU> ...
+
+Optimizing unit <control_unit> ...
+WARNING:Xst:1710 - FF/Latch <disp_ctrl/l_clk/i_18> (without init value) has a constant value of 0 in block <top_level_lab8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <disp_ctrl/l_clk/i_19> (without init value) has a constant value of 0 in block <top_level_lab8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <disp_ctrl/l_clk/i_20> (without init value) has a constant value of 0 in block <top_level_lab8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <disp_ctrl/l_clk/i_21> (without init value) has a constant value of 0 in block <top_level_lab8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <disp_ctrl/l_clk/i_22> (without init value) has a constant value of 0 in block <top_level_lab8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <disp_ctrl/l_clk/i_23> (without init value) has a constant value of 0 in block <top_level_lab8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <disp_ctrl/l_clk/i_24> (without init value) has a constant value of 0 in block <top_level_lab8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <disp_ctrl/l_clk/i_25> (without init value) has a constant value of 0 in block <top_level_lab8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <disp_ctrl/l_clk/i_26> (without init value) has a constant value of 0 in block <top_level_lab8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <disp_ctrl/l_clk/i_27> (without init value) has a constant value of 0 in block <top_level_lab8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <disp_ctrl/l_clk/i_28> (without init value) has a constant value of 0 in block <top_level_lab8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <disp_ctrl/l_clk/i_29> (without init value) has a constant value of 0 in block <top_level_lab8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <disp_ctrl/l_clk/i_30> (without init value) has a constant value of 0 in block <top_level_lab8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <disp_ctrl/l_clk/i_31> (without init value) has a constant value of 0 in block <top_level_lab8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <c_div/i_17> (without init value) has a constant value of 0 in block <top_level_lab8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <c_div/i_18> (without init value) has a constant value of 0 in block <top_level_lab8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <c_div/i_19> (without init value) has a constant value of 0 in block <top_level_lab8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <c_div/i_20> (without init value) has a constant value of 0 in block <top_level_lab8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <c_div/i_21> (without init value) has a constant value of 0 in block <top_level_lab8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <c_div/i_22> (without init value) has a constant value of 0 in block <top_level_lab8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <c_div/i_23> (without init value) has a constant value of 0 in block <top_level_lab8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <c_div/i_24> (without init value) has a constant value of 0 in block <top_level_lab8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <c_div/i_25> (without init value) has a constant value of 0 in block <top_level_lab8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <c_div/i_26> (without init value) has a constant value of 0 in block <top_level_lab8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <c_div/i_27> (without init value) has a constant value of 0 in block <top_level_lab8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <c_div/i_28> (without init value) has a constant value of 0 in block <top_level_lab8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <c_div/i_29> (without init value) has a constant value of 0 in block <top_level_lab8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <c_div/i_30> (without init value) has a constant value of 0 in block <top_level_lab8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <c_div/i_31> (without init value) has a constant value of 0 in block <top_level_lab8>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <c_div/i_0> in Unit <top_level_lab8> is equivalent to the following FF/Latch, which will be removed : <disp_ctrl/l_clk/i_0> 
+INFO:Xst:2261 - The FF/Latch <c_div/i_1> in Unit <top_level_lab8> is equivalent to the following FF/Latch, which will be removed : <disp_ctrl/l_clk/i_1> 
+INFO:Xst:2261 - The FF/Latch <c_div/i_2> in Unit <top_level_lab8> is equivalent to the following FF/Latch, which will be removed : <disp_ctrl/l_clk/i_2> 
+INFO:Xst:2261 - The FF/Latch <c_div/i_3> in Unit <top_level_lab8> is equivalent to the following FF/Latch, which will be removed : <disp_ctrl/l_clk/i_3> 
+INFO:Xst:2261 - The FF/Latch <c_div/i_4> in Unit <top_level_lab8> is equivalent to the following FF/Latch, which will be removed : <disp_ctrl/l_clk/i_4> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block top_level_lab8, actual ratio is 7.
+Latch RP/CU/R_Adr_0 has been replicated 1 time(s)
+Latch RP/CU/R_Adr_1 has been replicated 1 time(s)
+Latch RP/CU/S_Adr_0 has been replicated 1 time(s)
+Latch RP/CU/S_Adr_1 has been replicated 2 time(s)
+Latch RP/CU/S_Adr_2 has been replicated 2 time(s)
+Latch RP/CU/s_sel has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 240
+ Flip-Flops                                            : 240
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : top_level_lab8.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 856
+#      GND                         : 2
+#      INV                         : 9
+#      LUT1                        : 63
+#      LUT2                        : 49
+#      LUT3                        : 25
+#      LUT4                        : 32
+#      LUT5                        : 129
+#      LUT6                        : 207
+#      MUXCY                       : 162
+#      MUXF7                       : 30
+#      VCC                         : 2
+#      XORCY                       : 146
+# FlipFlops/Latches                : 284
+#      FDC                         : 109
+#      FDCE                        : 128
+#      FDE                         : 2
+#      FDP                         : 1
+#      LD                          : 44
+# RAMS                             : 1
+#      RAMB8BWER                   : 1
+# Clock Buffers                    : 4
+#      BUFG                        : 3
+#      BUFGP                       : 1
+# IO Buffers                       : 24
+#      IBUF                        : 5
+#      OBUF                        : 19
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             276  out of  18224     1%  
+ Number of Slice LUTs:                  514  out of   9112     5%  
+    Number used as Logic:               514  out of   9112     5%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    612
+   Number with an unused Flip Flop:     336  out of    612    54%  
+   Number with an unused LUT:            98  out of    612    16%  
+   Number of fully used LUT-FF pairs:   178  out of    612    29%  
+   Number of unique control sets:        15
+
+IO Utilization: 
+ Number of IOs:                          25
+ Number of bonded IOBs:                  25  out of    232    10%  
+    IOB Flip Flops/Latches:               8
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                1  out of     32     3%  
+    Number using Block RAM only:          1
+ Number of BUFG/BUFGCTRLs:                4  out of     16    25%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-------------------------------------------+----------------------------------------------+-------+
+Clock Signal                               | Clock buffer(FF name)                        | Load  |
+-------------------------------------------+----------------------------------------------+-------+
+disp_ctrl/l_clk/clk_out                    | NONE(disp_ctrl/l_ctlr/present_state_FSM_FFd3)| 4     |
+step_out(db1/D_out:O)                      | NONE(*)(counter_0)                           | 16    |
+clk                                        | BUFGP                                        | 33    |
+c_div/clk_out                              | BUFG                                         | 20    |
+rp_step_out(db2/D_out:O)                   | BUFG(*)(RP/EU/ID/reg8x16/r0/Dout_0)          | 168   |
+RP/CU/Mram__n019915(RP/CU/Mram__n0199151:O)| BUFG(*)(RP/CU/pc_ld)                         | 44    |
+-------------------------------------------+----------------------------------------------+-------+
+(*) These 3 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 7.449ns (Maximum Frequency: 134.251MHz)
+   Minimum input arrival time before clock: 4.429ns
+   Maximum output required time after clock: 10.185ns
+   Maximum combinational path delay: 9.079ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'disp_ctrl/l_clk/clk_out'
+  Clock period: 1.506ns (frequency: 663.966MHz)
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Delay:               1.506ns (Levels of Logic = 0)
+  Source:            disp_ctrl/l_ctlr/present_state_FSM_FFd2 (FF)
+  Destination:       disp_ctrl/l_ctlr/present_state_FSM_FFd1 (FF)
+  Source Clock:      disp_ctrl/l_clk/clk_out rising
+  Destination Clock: disp_ctrl/l_clk/clk_out rising
+
+  Data Path: disp_ctrl/l_ctlr/present_state_FSM_FFd2 to disp_ctrl/l_ctlr/present_state_FSM_FFd1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             14   0.447   0.957  disp_ctrl/l_ctlr/present_state_FSM_FFd2 (disp_ctrl/l_ctlr/present_state_FSM_FFd2)
+     FDC:D                     0.102          disp_ctrl/l_ctlr/present_state_FSM_FFd1
+    ----------------------------------------
+    Total                      1.506ns (0.549ns logic, 0.957ns route)
+                                       (36.5% logic, 63.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'step_out'
+  Clock period: 1.989ns (frequency: 502.702MHz)
+  Total number of paths / destination ports: 136 / 16
+-------------------------------------------------------------------------
+Delay:               1.989ns (Levels of Logic = 17)
+  Source:            counter_0 (FF)
+  Destination:       counter_15 (FF)
+  Source Clock:      step_out rising
+  Destination Clock: step_out rising
+
+  Data Path: counter_0 to counter_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.447   0.616  counter_0 (counter_0)
+     INV:I->O              1   0.206   0.000  Mcount_counter_lut<0>_INV_0 (Mcount_counter_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  Mcount_counter_cy<0> (Mcount_counter_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_counter_cy<1> (Mcount_counter_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_counter_cy<2> (Mcount_counter_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_counter_cy<3> (Mcount_counter_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_counter_cy<4> (Mcount_counter_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_counter_cy<5> (Mcount_counter_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_counter_cy<6> (Mcount_counter_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_counter_cy<7> (Mcount_counter_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_counter_cy<8> (Mcount_counter_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_counter_cy<9> (Mcount_counter_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_counter_cy<10> (Mcount_counter_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_counter_cy<11> (Mcount_counter_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_counter_cy<12> (Mcount_counter_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_counter_cy<13> (Mcount_counter_cy<13>)
+     MUXCY:CI->O           0   0.019   0.000  Mcount_counter_cy<14> (Mcount_counter_cy<14>)
+     XORCY:CI->O           1   0.180   0.000  Mcount_counter_xor<15> (Result<15>)
+     FDC:D                     0.102          counter_15
+    ----------------------------------------
+    Total                      1.989ns (1.373ns logic, 0.616ns route)
+                                       (69.0% logic, 31.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 6.870ns (frequency: 145.569MHz)
+  Total number of paths / destination ports: 9529 / 48
+-------------------------------------------------------------------------
+Delay:               6.870ns (Levels of Logic = 6)
+  Source:            RAM/dut/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.WIDE_PRIM9.ram (RAM)
+  Destination:       RAM/dut/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.WIDE_PRIM9.ram (RAM)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: RAM/dut/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.WIDE_PRIM9.ram to RAM/dut/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.WIDE_PRIM9.ram
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB8BWER:CLKAWRCLK->DOADO0    5   1.650   1.059  U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.WIDE_PRIM9.ram (douta<0>)
+     end scope: 'RAM/dut:douta<0>'
+     LUT5:I0->O            6   0.203   0.745  RP/EU/ID/s_mux1bit/Mmux_S_out13 (RP/EU/ID/S_out<0>)
+     LUT4:I3->O            1   0.205   0.000  RP/EU/ID/ALU/Madd_n0036_lut<0> (RP/EU/ID/ALU/Madd_n0036_lut<0>)
+     XORCY:LI->O           1   0.136   0.684  RP/EU/ID/ALU/Madd_n0036_xor<0> (RP/EU/ID/ALU/n0036<0>)
+     LUT5:I3->O            3   0.203   0.651  RP/EU/ID/ALU/Mmux_Y_7 (RP/EU/ID/ALU/Mmux_Y_7)
+     LUT3:I2->O            9   0.205   0.829  RP/EU/ID/ALU/Alu_Op<3>1 (r_wire<0>)
+     begin scope: 'RAM/dut:dina<0>'
+     RAMB8BWER:DIADI0          0.300          U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.WIDE_PRIM9.ram
+    ----------------------------------------
+    Total                      6.870ns (2.902ns logic, 3.968ns route)
+                                       (42.2% logic, 57.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'c_div/clk_out'
+  Clock period: 1.165ns (frequency: 858.185MHz)
+  Total number of paths / destination ports: 18 / 18
+-------------------------------------------------------------------------
+Delay:               1.165ns (Levels of Logic = 0)
+  Source:            db2/q8 (FF)
+  Destination:       db2/q9 (FF)
+  Source Clock:      c_div/clk_out rising
+  Destination Clock: c_div/clk_out rising
+
+  Data Path: db2/q8 to db2/q9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              2   0.447   0.616  db2/q8 (db2/q8)
+     FDC:D                     0.102          db2/q9
+    ----------------------------------------
+    Total                      1.165ns (0.549ns logic, 0.616ns route)
+                                       (47.1% logic, 52.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'rp_step_out'
+  Clock period: 6.878ns (frequency: 145.383MHz)
+  Total number of paths / destination ports: 81056 / 160
+-------------------------------------------------------------------------
+Delay:               6.878ns (Levels of Logic = 20)
+  Source:            RP/EU/ID/reg8x16/r0/Dout_2 (FF)
+  Destination:       RP/EU/PC/Q_15 (FF)
+  Source Clock:      rp_step_out rising
+  Destination Clock: rp_step_out rising
+
+  Data Path: RP/EU/ID/reg8x16/r0/Dout_2 to RP/EU/PC/Q_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             3   0.447   1.015  RP/EU/ID/reg8x16/r0/Dout_2 (RP/EU/ID/reg8x16/r0/Dout_2)
+     LUT6:I0->O            3   0.203   0.755  RP/EU/ID/s_mux1bit/Mmux_S_out92 (RP/EU/ID/s_mux1bit/Mmux_S_out91)
+     LUT5:I3->O            8   0.203   0.803  RP/EU/ID/s_mux1bit/Mmux_S_out93 (RP/EU/ID/S_out<2>)
+     LUT4:I3->O            1   0.205   0.000  RP/EU/ID/ALU/Madd_n0036_lut<2> (RP/EU/ID/ALU/Madd_n0036_lut<2>)
+     MUXCY:S->O            1   0.172   0.000  RP/EU/ID/ALU/Madd_n0036_cy<2> (RP/EU/ID/ALU/Madd_n0036_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  RP/EU/ID/ALU/Madd_n0036_cy<3> (RP/EU/ID/ALU/Madd_n0036_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  RP/EU/ID/ALU/Madd_n0036_cy<4> (RP/EU/ID/ALU/Madd_n0036_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  RP/EU/ID/ALU/Madd_n0036_cy<5> (RP/EU/ID/ALU/Madd_n0036_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  RP/EU/ID/ALU/Madd_n0036_cy<6> (RP/EU/ID/ALU/Madd_n0036_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  RP/EU/ID/ALU/Madd_n0036_cy<7> (RP/EU/ID/ALU/Madd_n0036_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  RP/EU/ID/ALU/Madd_n0036_cy<8> (RP/EU/ID/ALU/Madd_n0036_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  RP/EU/ID/ALU/Madd_n0036_cy<9> (RP/EU/ID/ALU/Madd_n0036_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  RP/EU/ID/ALU/Madd_n0036_cy<10> (RP/EU/ID/ALU/Madd_n0036_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  RP/EU/ID/ALU/Madd_n0036_cy<11> (RP/EU/ID/ALU/Madd_n0036_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  RP/EU/ID/ALU/Madd_n0036_cy<12> (RP/EU/ID/ALU/Madd_n0036_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  RP/EU/ID/ALU/Madd_n0036_cy<13> (RP/EU/ID/ALU/Madd_n0036_cy<13>)
+     MUXCY:CI->O           1   0.019   0.000  RP/EU/ID/ALU/Madd_n0036_cy<14> (RP/EU/ID/ALU/Madd_n0036_cy<14>)
+     XORCY:CI->O           2   0.180   0.721  RP/EU/ID/ALU/Madd_n0036_xor<15> (RP/EU/ID/ALU/n0036<15>)
+     LUT5:I3->O            3   0.203   0.651  RP/EU/ID/ALU/Alu_Op<3>_710 (RP/EU/ID/ALU/Alu_Op<3>_710)
+     LUT5:I4->O            1   0.205   0.580  RP/EU/PC/ld_Q[15]_select_4_OUT<15>1 (RP/EU/PC/ld_Q[15]_select_4_OUT<15>1)
+     LUT5:I4->O            1   0.205   0.000  RP/EU/PC/ld_Q[15]_select_4_OUT<15>2 (RP/EU/PC/ld_Q[15]_select_4_OUT<15>)
+     FDC:D                     0.102          RP/EU/PC/Q_15
+    ----------------------------------------
+    Total                      6.878ns (2.353ns logic, 4.525ns route)
+                                       (34.2% logic, 65.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'RP/CU/Mram__n019915'
+  Clock period: 7.449ns (frequency: 134.251MHz)
+  Total number of paths / destination ports: 7689 / 3
+-------------------------------------------------------------------------
+Delay:               7.449ns (Levels of Logic = 9)
+  Source:            RP/CU/S_Adr_2_1 (LATCH)
+  Destination:       RP/CU/ns_Z (LATCH)
+  Source Clock:      RP/CU/Mram__n019915 falling
+  Destination Clock: RP/CU/Mram__n019915 falling
+
+  Data Path: RP/CU/S_Adr_2_1 to RP/CU/ns_Z
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               7   0.498   0.878  RP/CU/S_Adr_2_1 (RP/CU/S_Adr_2_1)
+     LUT6:I4->O            3   0.203   0.755  RP/EU/ID/s_mux1bit/Mmux_S_out82 (RP/EU/ID/s_mux1bit/Mmux_S_out81)
+     LUT5:I3->O            7   0.203   0.774  RP/EU/ID/s_mux1bit/Mmux_S_out83 (RP/EU/ID/S_out<1>)
+     LUT4:I3->O            1   0.205   0.000  RP/EU/ID/ALU/Msub_GND_43_o_GND_43_o_sub_4_OUT_lut<1> (RP/EU/ID/ALU/Msub_GND_43_o_GND_43_o_sub_4_OUT_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  RP/EU/ID/ALU/Msub_GND_43_o_GND_43_o_sub_4_OUT_cy<1> (RP/EU/ID/ALU/Msub_GND_43_o_GND_43_o_sub_4_OUT_cy<1>)
+     XORCY:CI->O           2   0.180   0.721  RP/EU/ID/ALU/Msub_GND_43_o_GND_43_o_sub_4_OUT_xor<2> (RP/EU/ID/ALU/GND_43_o_GND_43_o_sub_4_OUT<2>)
+     LUT6:I4->O            2   0.203   0.845  RP/EU/ID/ALU/Alu_Op<3>_714 (RP/EU/ID/ALU/Alu_Op<3>_714)
+     LUT6:I3->O            1   0.205   0.580  RP/CU/Mmux_state[4]_ps_Z_Mux_80_o12 (RP/CU/Mmux_state[4]_ps_Z_Mux_80_o11)
+     LUT6:I5->O            1   0.205   0.580  RP/CU/Mmux_state[4]_ps_Z_Mux_80_o13 (RP/CU/Mmux_state[4]_ps_Z_Mux_80_o12)
+     LUT6:I5->O            1   0.205   0.000  RP/CU/Mmux_state[4]_ps_Z_Mux_80_o18 (RP/CU/state[4]_ps_Z_Mux_80_o)
+     LD:D                      0.037          RP/CU/ns_Z
+    ----------------------------------------
+    Total                      7.449ns (2.316ns logic, 5.133ns route)
+                                       (31.1% logic, 68.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'disp_ctrl/l_clk/clk_out'
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Offset:              3.715ns (Levels of Logic = 1)
+  Source:            reset (PAD)
+  Destination:       disp_ctrl/l_ctlr/present_state_FSM_FFd3 (FF)
+  Destination Clock: disp_ctrl/l_clk/clk_out rising
+
+  Data Path: reset to disp_ctrl/l_ctlr/present_state_FSM_FFd3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           239   1.222   2.063  reset_IBUF (reset_IBUF)
+     FDC:CLR                   0.430          disp_ctrl/l_ctlr/present_state_FSM_FFd3
+    ----------------------------------------
+    Total                      3.715ns (1.652ns logic, 2.063ns route)
+                                       (44.5% logic, 55.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'step_out'
+  Total number of paths / destination ports: 16 / 16
+-------------------------------------------------------------------------
+Offset:              3.715ns (Levels of Logic = 1)
+  Source:            reset (PAD)
+  Destination:       counter_0 (FF)
+  Destination Clock: step_out rising
+
+  Data Path: reset to counter_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           239   1.222   2.063  reset_IBUF (reset_IBUF)
+     FDC:CLR                   0.430          counter_0
+    ----------------------------------------
+    Total                      3.715ns (1.652ns logic, 2.063ns route)
+                                       (44.5% logic, 55.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 48 / 48
+-------------------------------------------------------------------------
+Offset:              3.774ns (Levels of Logic = 3)
+  Source:            dump_mem (PAD)
+  Destination:       RAM/dut/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.WIDE_PRIM9.ram (RAM)
+  Destination Clock: clk rising
+
+  Data Path: dump_mem to RAM/dut/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.WIDE_PRIM9.ram
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            16   1.222   1.349  dump_mem_IBUF (dump_mem_IBUF)
+     LUT5:I0->O            3   0.203   0.650  Mmux_dump_wire81 (dump_wire<7>)
+     begin scope: 'RAM/dut:addra<7>'
+     RAMB8BWER:ADDRAWRADDR12        0.350          U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.WIDE_PRIM9.ram
+    ----------------------------------------
+    Total                      3.774ns (1.775ns logic, 1.999ns route)
+                                       (47.0% logic, 53.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'c_div/clk_out'
+  Total number of paths / destination ports: 22 / 22
+-------------------------------------------------------------------------
+Offset:              4.429ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       db2/q8 (FF)
+  Destination Clock: c_div/clk_out rising
+
+  Data Path: reset to db2/q8
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           239   1.222   2.063  reset_IBUF (reset_IBUF)
+     INV:I->O              2   0.206   0.616  db2/reset_inv1_INV_0 (db1/reset_inv)
+     FDE:CE                    0.322          db1/q8
+    ----------------------------------------
+    Total                      4.429ns (1.750ns logic, 2.679ns route)
+                                       (39.5% logic, 60.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'rp_step_out'
+  Total number of paths / destination ports: 168 / 168
+-------------------------------------------------------------------------
+Offset:              3.715ns (Levels of Logic = 1)
+  Source:            reset (PAD)
+  Destination:       RP/EU/ID/reg8x16/r0/Dout_0 (FF)
+  Destination Clock: rp_step_out rising
+
+  Data Path: reset to RP/EU/ID/reg8x16/r0/Dout_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           239   1.222   2.063  reset_IBUF (reset_IBUF)
+     FDCE:CLR                  0.430          RP/EU/ID/reg8x16/r7/Dout_0
+    ----------------------------------------
+    Total                      3.715ns (1.652ns logic, 2.063ns route)
+                                       (44.5% logic, 55.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'RP/CU/Mram__n019915'
+  Total number of paths / destination ports: 680 / 15
+-------------------------------------------------------------------------
+Offset:              10.185ns (Levels of Logic = 7)
+  Source:            RP/CU/R_Adr_1 (LATCH)
+  Destination:       F (PAD)
+  Source Clock:      RP/CU/Mram__n019915 falling
+
+  Data Path: RP/CU/R_Adr_1 to F
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q              32   0.498   1.396  RP/CU/R_Adr_1 (RP/CU/R_Adr_1)
+     LUT6:I4->O            3   0.203   0.755  RP/EU/ID/reg8x16/R<15>LogicTrst2 (RP/EU/ID/reg8x16/R<15>LogicTrst1)
+     LUT3:I1->O            3   0.203   0.755  RP/EU/ID/reg8x16/R<15>LogicTrst3 (RP/EU/Reg_out<15>)
+     LUT6:I4->O            1   0.203   0.808  disp_ctrl/mux/Mmux_Y<3>3 (disp_ctrl/mux/Mmux_Y<3>2)
+     LUT6:I3->O            1   0.205   0.580  disp_ctrl/mux/Mmux_Y<3>4 (disp_ctrl/mux/Mmux_Y<3>3)
+     LUT5:I4->O            7   0.205   1.021  disp_ctrl/mux/Mmux_Y<3>6 (disp_ctrl/hex<3>)
+     LUT4:I0->O            1   0.203   0.579  disp_ctrl/SSD/Mram__n0024111 (F_OBUF)
+     OBUF:I->O                 2.571          F_OBUF (F)
+    ----------------------------------------
+    Total                     10.185ns (4.291ns logic, 5.894ns route)
+                                       (42.1% logic, 57.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'disp_ctrl/l_clk/clk_out'
+  Total number of paths / destination ports: 284 / 11
+-------------------------------------------------------------------------
+Offset:              8.928ns (Levels of Logic = 6)
+  Source:            disp_ctrl/l_ctlr/present_state_FSM_FFd2 (FF)
+  Destination:       A (PAD)
+  Source Clock:      disp_ctrl/l_clk/clk_out rising
+
+  Data Path: disp_ctrl/l_ctlr/present_state_FSM_FFd2 to A
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             14   0.447   1.322  disp_ctrl/l_ctlr/present_state_FSM_FFd2 (disp_ctrl/l_ctlr/present_state_FSM_FFd2)
+     LUT6:I0->O            1   0.203   0.580  disp_ctrl/mux/Mmux_Y<0>2 (disp_ctrl/mux/Mmux_Y<0>1)
+     LUT6:I5->O            1   0.205   0.808  disp_ctrl/mux/Mmux_Y<0>3 (disp_ctrl/mux/Mmux_Y<0>2)
+     LUT6:I3->O            1   0.205   0.580  disp_ctrl/mux/Mmux_Y<0>4 (disp_ctrl/mux/Mmux_Y<0>3)
+     LUT5:I4->O            7   0.205   1.021  disp_ctrl/mux/Mmux_Y<0>6 (disp_ctrl/hex<0>)
+     LUT4:I0->O            1   0.203   0.579  disp_ctrl/SSD/Mram__n002421 (E_OBUF)
+     OBUF:I->O                 2.571          E_OBUF (E)
+    ----------------------------------------
+    Total                      8.928ns (4.039ns logic, 4.889ns route)
+                                       (45.2% logic, 54.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 112 / 7
+-------------------------------------------------------------------------
+Offset:              8.374ns (Levels of Logic = 5)
+  Source:            RAM/dut/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.WIDE_PRIM9.ram (RAM)
+  Destination:       A (PAD)
+  Source Clock:      clk rising
+
+  Data Path: RAM/dut/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.WIDE_PRIM9.ram to A
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB8BWER:CLKAWRCLK->DOADO8    7   1.650   1.118  U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.WIDE_PRIM9.ram (douta<4>)
+     end scope: 'RAM/dut:douta<4>'
+     LUT6:I1->O            1   0.203   0.827  disp_ctrl/mux/Mmux_Y<0>5 (disp_ctrl/mux/Mmux_Y<0>4)
+     LUT5:I1->O            7   0.203   1.021  disp_ctrl/mux/Mmux_Y<0>6 (disp_ctrl/hex<0>)
+     LUT4:I0->O            1   0.203   0.579  disp_ctrl/SSD/Mram__n002421 (E_OBUF)
+     OBUF:I->O                 2.571          E_OBUF (E)
+    ----------------------------------------
+    Total                      8.374ns (4.830ns logic, 3.544ns route)
+                                       (57.7% logic, 42.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'step_out'
+  Total number of paths / destination ports: 112 / 7
+-------------------------------------------------------------------------
+Offset:              7.819ns (Levels of Logic = 5)
+  Source:            counter_12 (FF)
+  Destination:       A (PAD)
+  Source Clock:      step_out rising
+
+  Data Path: counter_12 to A
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.447   0.864  counter_12 (counter_12)
+     LUT5:I1->O            1   0.203   0.944  disp_ctrl/mux/Mmux_Y<0>1 (disp_ctrl/mux/Mmux_Y<0>)
+     LUT6:I0->O            1   0.203   0.580  disp_ctrl/mux/Mmux_Y<0>4 (disp_ctrl/mux/Mmux_Y<0>3)
+     LUT5:I4->O            7   0.205   1.021  disp_ctrl/mux/Mmux_Y<0>6 (disp_ctrl/hex<0>)
+     LUT4:I0->O            1   0.203   0.579  disp_ctrl/SSD/Mram__n002421 (E_OBUF)
+     OBUF:I->O                 2.571          E_OBUF (E)
+    ----------------------------------------
+    Total                      7.819ns (3.832ns logic, 3.987ns route)
+                                       (49.0% logic, 51.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'rp_step_out'
+  Total number of paths / destination ports: 1008 / 7
+-------------------------------------------------------------------------
+Offset:              9.719ns (Levels of Logic = 7)
+  Source:            RP/EU/ID/reg8x16/r0/Dout_15 (FF)
+  Destination:       F (PAD)
+  Source Clock:      rp_step_out rising
+
+  Data Path: RP/EU/ID/reg8x16/r0/Dout_15 to F
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             2   0.447   0.981  RP/EU/ID/reg8x16/r0/Dout_15 (RP/EU/ID/reg8x16/r0/Dout_15)
+     LUT6:I0->O            3   0.203   0.755  RP/EU/ID/reg8x16/R<15>LogicTrst2 (RP/EU/ID/reg8x16/R<15>LogicTrst1)
+     LUT3:I1->O            3   0.203   0.755  RP/EU/ID/reg8x16/R<15>LogicTrst3 (RP/EU/Reg_out<15>)
+     LUT6:I4->O            1   0.203   0.808  disp_ctrl/mux/Mmux_Y<3>3 (disp_ctrl/mux/Mmux_Y<3>2)
+     LUT6:I3->O            1   0.205   0.580  disp_ctrl/mux/Mmux_Y<3>4 (disp_ctrl/mux/Mmux_Y<3>3)
+     LUT5:I4->O            7   0.205   1.021  disp_ctrl/mux/Mmux_Y<3>6 (disp_ctrl/hex<3>)
+     LUT4:I0->O            1   0.203   0.579  disp_ctrl/SSD/Mram__n0024111 (F_OBUF)
+     OBUF:I->O                 2.571          F_OBUF (F)
+    ----------------------------------------
+    Total                      9.719ns (4.240ns logic, 5.479ns route)
+                                       (43.6% logic, 56.4% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 140 / 7
+-------------------------------------------------------------------------
+Delay:               9.079ns (Levels of Logic = 6)
+  Source:            dump_mem (PAD)
+  Destination:       A (PAD)
+
+  Data Path: dump_mem to A
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            16   1.222   1.349  dump_mem_IBUF (dump_mem_IBUF)
+     LUT5:I0->O            1   0.203   0.944  disp_ctrl/mux/Mmux_Y<0>1 (disp_ctrl/mux/Mmux_Y<0>)
+     LUT6:I0->O            1   0.203   0.580  disp_ctrl/mux/Mmux_Y<0>4 (disp_ctrl/mux/Mmux_Y<0>3)
+     LUT5:I4->O            7   0.205   1.021  disp_ctrl/mux/Mmux_Y<0>6 (disp_ctrl/hex<0>)
+     LUT4:I0->O            1   0.203   0.579  disp_ctrl/SSD/Mram__n002421 (E_OBUF)
+     OBUF:I->O                 2.571          E_OBUF (E)
+    ----------------------------------------
+    Total                      9.079ns (4.607ns logic, 4.472ns route)
+                                       (50.7% logic, 49.3% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock RP/CU/Mram__n019915
+-------------------+---------+---------+---------+---------+
+                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------+---------+---------+---------+---------+
+RP/CU/Mram__n019915|         |         |    7.449|         |
+clk                |         |         |    7.824|         |
+rp_step_out        |         |         |    7.535|         |
+-------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock c_div/clk_out
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+c_div/clk_out  |    1.165|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk
+-------------------+---------+---------+---------+---------+
+                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------+---------+---------+---------+---------+
+RP/CU/Mram__n019915|         |    6.495|         |         |
+clk                |    6.870|         |         |         |
+rp_step_out        |    6.581|         |         |         |
+step_out           |    2.270|         |         |         |
+-------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock disp_ctrl/l_clk/clk_out
+-----------------------+---------+---------+---------+---------+
+                       | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock           |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------+---------+---------+---------+---------+
+disp_ctrl/l_clk/clk_out|    1.506|         |         |         |
+-----------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock rp_step_out
+-------------------+---------+---------+---------+---------+
+                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------+---------+---------+---------+---------+
+RP/CU/Mram__n019915|         |    6.792|         |         |
+clk                |    7.167|         |         |         |
+rp_step_out        |    6.878|         |         |         |
+-------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock step_out
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+step_out       |    1.989|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 12.00 secs
+Total CPU time to Xst completion: 12.14 secs
+ 
+--> 
+
+Total memory usage is 299788 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  124 (   0 filtered)
+Number of infos    :    8 (   0 filtered)
+

@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\top_level_lab8.ncd
+OUTFILE=C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8\top_level_lab8.bit
+FAMILY=Spartan6
+PART=xc6slx16-3csg324
+WORKINGDIR=C:\Users\Lilpe\OneDrive\Classes\CECS 301\Labs\Lab8
+LICENSE=WebPack
+USER_INFO=210937374_0_0_314

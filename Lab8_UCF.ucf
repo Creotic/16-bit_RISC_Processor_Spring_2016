@@ -1,0 +1,72 @@
+# Pinouts for Nexys3 Board  (Spartan6-XC6SLX16-324)
+
+# Start I/O Pin Assignments
+ NET "clk"        LOC = "v10"  ;    # 100 MHz board clock
+
+# Slide Switches
+ NET "dump_mem"      LOC = "t10"  ; 
+# NET "sw<1>"      LOC = "t9"   ; 
+# NET "sw<2>"      LOC = "v9"   ; 
+# NET "sw<3>"      LOC = "m8"   ; 
+# NET "sw<4>"      LOC = "n8"   ; 
+# NET "sw<5>"      LOC = "u8"   ; 
+# NET "sw<6>"      LOC = "v8"   ; 
+ NET "ad_sel"      LOC = "t5"   ;
+
+# Push Buttons
+ NET "reset"       LOC = "a8"   ;   # typically used for one shot single step 
+# NET "btnF"       LOC = "b8"   ;
+ NET "rp_step"       LOC = "c9"   ;   # typically used for reset
+ NET "step"       LOC = "c4"   ; 
+# NET "btnR"       LOC = "d9"   ;   
+
+# LED's
+ NET "status<0>"    LOC = "u16"  ; 
+ NET "status<1>"    LOC = "v16"  ; 
+ NET "status<2>"    LOC = "u15"  ; 
+ NET "status<3>"    LOC = "v15"  ; 
+ NET "status<4>"    LOC = "m11"  ;   
+ NET "status<5>"    LOC = "n11"  ;  
+ NET "status<6>"    LOC = "r11"  ;   
+ NET "status<7>"    LOC = "t11"  ;   
+
+# 7-segment Display 
+ NET "AN<0>"  LOC = "n16"  ;
+ NET "AN<1>"  LOC = "n15"  ;
+ NET "AN<2>"  LOC = "p18"  ;
+ NET "AN<3>"  LOC = "p17"  ;
+ NET "A"          LOC = "t17"  ;
+ NET "B"          LOC = "t18"  ;
+ NET "C"          LOC = "u17"  ;
+ NET "D"          LOC = "u18"  ;
+ NET "E"          LOC = "m14"  ;
+ NET "F"          LOC = "n14"  ;
+ NET "G"          LOC = "l14"  ;
+# NET "dp"         LOC = "m13"  ;
+
+# RS-232
+# NET "RxD"        LOC = "n17"  ;  
+# NET "TxD"        LOC = "n18"  ; 
+
+# VGA Graphics 
+# NET "vgaRed<0>"   LOC= "U7"   ; 
+# NET "vgaRed<1>"   LOC= "V7"   ; 
+# NET "vgaRed<2>"   LOC= "N7"   ; 
+# NET "vgaGreen<0>" LOC= "N8"   ; 
+# NET "vgaGreen<1>" LOC= "T6"   ; 
+# NET "vgaGreen<2>" LOC= "V6"   ; 
+# NET "vgaBlue<1>"  LOC= "R7"   ; 
+# NET "vgaBlue<2>"  LOC= "T7"   ; 
+# NET "Hsync"       LOC= "N6"   ; 
+# NET "Vsync"       LOC= "P7"   ; 
+
+# PS2 KB port (clock and data)
+# NET "PS2_KBClk"   LOC= "L12"  ; 
+# NET "PS2_KBData   LOC= "J13"  ; 
+
+
+# PS2 Mouse port (clock and data)
+# NET "PS2_MClk"   LOC= "L13"  ; 
+# NET "PS2_MData   LOC= "K14"  ; 
+
+

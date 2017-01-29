@@ -1,0 +1,32 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Thu May 05 16:54:28 2016
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "A" LOCATE = SITE "T17" LEVEL 1;
+COMP "B" LOCATE = SITE "T18" LEVEL 1;
+COMP "C" LOCATE = SITE "U17" LEVEL 1;
+COMP "D" LOCATE = SITE "U18" LEVEL 1;
+COMP "E" LOCATE = SITE "M14" LEVEL 1;
+COMP "F" LOCATE = SITE "N14" LEVEL 1;
+COMP "G" LOCATE = SITE "L14" LEVEL 1;
+COMP "clk" LOCATE = SITE "V10" LEVEL 1;
+COMP "step" LOCATE = SITE "C4" LEVEL 1;
+COMP "AN<0>" LOCATE = SITE "N16" LEVEL 1;
+COMP "AN<1>" LOCATE = SITE "N15" LEVEL 1;
+COMP "AN<2>" LOCATE = SITE "P18" LEVEL 1;
+COMP "AN<3>" LOCATE = SITE "P17" LEVEL 1;
+COMP "reset" LOCATE = SITE "A8" LEVEL 1;
+COMP "rp_step" LOCATE = SITE "C9" LEVEL 1;
+COMP "ad_sel" LOCATE = SITE "T5" LEVEL 1;
+COMP "dump_mem" LOCATE = SITE "T10" LEVEL 1;
+COMP "status<0>" LOCATE = SITE "U16" LEVEL 1;
+COMP "status<1>" LOCATE = SITE "V16" LEVEL 1;
+COMP "status<2>" LOCATE = SITE "U15" LEVEL 1;
+COMP "status<3>" LOCATE = SITE "V15" LEVEL 1;
+COMP "status<4>" LOCATE = SITE "M11" LEVEL 1;
+COMP "status<5>" LOCATE = SITE "N11" LEVEL 1;
+COMP "status<6>" LOCATE = SITE "R11" LEVEL 1;
+COMP "status<7>" LOCATE = SITE "T11" LEVEL 1;
+SCHEMATIC END;
+
